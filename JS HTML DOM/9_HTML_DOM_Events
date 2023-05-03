@@ -1,0 +1,94 @@
+// Html DOM allows js to react to Html events
+
+// Reacting to Events 
+
+// A JavaScript can be executed when an event occurs, like when a user clicks on an HTML element.
+
+// To execute code when a user clicks on an element, add JavaScript code to an HTML event attribute:
+
+onclick = javaScript
+
+Examples
+// When a user clicks the mouse
+// when a web page has loaded
+// when an image has been loaded
+// when the mouse moves over an elements
+// when an input field is changed 
+// when an HTML form is submitted
+// when a user strokes a key
+
+
+// In this example, the content of the <h1> element is changed when a user clicks on it:
+
+Example
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 onclick="this.innerHTML = 'Ooops!'">Click on this text!</h1>
+
+</body>
+</html>
+
+
+// In this example, a function is called from the event handler:
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 onclick="changeText(this)">Click on this text!</h1>
+
+<script>
+function changeText(id) {
+  id.innerHTML = "Ooops!";
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+// HTML Event Attributes
+// To assign events to HTML elements you can use event attributes.
+
+<button onclick="displayDate()">Try it</button>
+
+
+
+
+
+// The onload and onunload Events
+// The onload and onunload events are triggered when the user enters or leaves the page.
+
+// The onload event can be used to check the visitor's browser type and browser version, and load the proper version of the web page based on the information.
+
+// The onload and onunload events can be used to deal with cookies.
+
+
+<body onload="checkCookies()"></body>
+
+
+
+
+
+// The onchange Event
+// The onchange event is often used in combination with validation of input fields.
+
+// Below is an example of how to use the onchange. The upperCase() function will be called when a user changes the content of an input field.
+
+<input type="text" id="fname" onchange="upperCase()"></input>
+
+
+
+
+
+
+// The onmouseover and onmouseout Events
+// The onmouseover and onmouseout events can be used to trigger a function when the user mouses over, or out of, an HTML element:
+
+
+
+// The onmousedown, onmouseup and onclick Events

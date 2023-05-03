@@ -1,0 +1,106 @@
+The addEventListener() method
+
+Add an event listener that fires when a user clicks a button: 
+document.getElementById("mybtn).addEventListener("click", displayDate);
+
+
+The addEventListener() method attaches an event handler to the specified element.
+
+The addEventListener() method attaches an event handler to an element without overwriting existing event handlers.
+
+we can add many event handlers to one element
+You can add many event handlers of the same type to one element, i.e two "click" events.
+
+You can add event listeners to any DOM object not only HTML elements. i.e the window object.
+
+The addEventListener() method makes it easier to control how the event reacts to bubbling.
+
+When using the addEventListener() method, the JavaScript is separated from the HTML markup, for better readability and allows you to add event listeners even when you do not control the HTML markup.
+
+You can easily remove an event listener by using the removeEventListener() method.
+
+
+Syntax
+
+element.addEventListener(event, function, useCapture);
+
+The first parameter is the type of the event (like "click" or "mousedown" or any other HTML DOM Event.)
+
+element.addEventListener("click", function(){ alert("Hello World!"); });
+
+You can also refer to an external "named" function:
+
+element.addEventListener("click", myFunction);
+
+function myFunction() {
+  alert ("Hello World!");
+}
+
+
+
+
+Add Many Event Handlers to the Same Element
+The addEventListener() method allows you to add many events to the same element, without overwriting existing events:
+
+element.addEventListener("click", myFunction);
+element.addEventListener("click", mySecondFunction);
+
+
+
+
+We can add events of different types to the same element:
+
+element:element.addEventListener("mouseover", myFunction);
+element.addEventListener("click", mySecondFunction);
+element.addEventListener("mouseout", myThirdFunction);
+
+
+
+Add an Event Handler to the window Object
+
+Example
+Add an event listener that fires when a user resizes the window:
+
+window.addEventListener("resize", function(){
+  document.getElementById("demo").innerHTML = sometext;
+});
+
+
+
+
+Passing Parameters
+When passing parameter values, use an "anonymous function" that calls the specified function with the parameters:
+
+Example
+element.addEventListener("click", function(){ myFunction(p1, p2); });
+
+
+Event Bubbling or event capturing 
+In JavaScript, event bubbling and event capturing are two mechanisms used to handle events in the Document Object Model (DOM).
+
+There are two ways of event propagation in the HTML DOM, bubbling and capturing.
+
+Event propagation is a way of defining the element order when an event occurs. If you have a <p> element inside a <div> element, and the user clicks on the <p> element, which element's "click" event should be handled first?
+
+There are two ways of event propagation in the HTML DOM, bubbling and capturing.
+
+Event propagation is a way of defining the element order when an event occurs. If you have a <p> element inside a <div> element, and the user clicks on the <p> element, which element's "click" event should be handled first?
+
+Event capturing is the process of capturing an event at the highest level of the DOM hierarchy, and then propagating it down to the target element.
+ On the other hand, event bubbling is the opposite process where the event is triggered at the target element and then propagated up through the DOM hierarchy.
+
+ In both mechanisms, events are handled by their parent elements before being passed down to their children. This can be useful in organizing and managing complex event handling scenarios, especially when there are multiple nested elements involved.
+
+ In React, event bubbling and capturing are important concepts to understand because React uses a synthetic event system to manage events. When an event is triggered in React, it is actually handled by a single event listener attached to the root of the DOM tree, and then propagated down to the relevant component.
+
+Understanding event bubbling and capturing can help you better understand how React's event system works, and how to effectively handle events in your React components.
+
+document.getElementById("myP").addEventListener("click", myFunction, true);
+document.getElementById("myDiv").addEventListener("click", myFunction, true);
+
+
+
+The removeEventListener() method
+The removeEventListener() method removes event handlers that have been attached with the addEventListener() method:
+
+element.removeEventListener("mousemove", myFunction);
