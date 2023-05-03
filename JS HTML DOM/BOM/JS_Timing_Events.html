@@ -1,0 +1,29 @@
+Js can be executed in time-intervals.
+This is called timing events.
+
+The setTimeout() and setInterval() are both methods of the HTML DOM Window object.
+
+The setTimeout() Method
+window.setTimeout(function, milliseconds);
+
+<button onclick="setTimeout(myFunction, 3000)">Try it</button>
+
+<script>
+function myFunction() {
+  alert('Hello');
+}
+</script>
+
+
+How to Stop the Execution?
+The clearTimeout() method stops the execution of the function specified in setTimeout().
+
+window.clearTimeout(timeoutVariable)
+
+
+
+
+The setInterval() Method
+The setInterval() method repeats a given function at every given time-interval.
+
+window.setInterval(function, milliseconds);

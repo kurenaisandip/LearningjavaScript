@@ -1,0 +1,105 @@
+ JS has three kind of poup boxes: alert boxes, Confirm Box and Prompt Box
+
+
+ // Alert Box
+ <!-- An alert box is often used if we want to make sure information comes through to the user.
+When an alert box pops up, the user will have to click "OK" to proceed -->
+
+Syntax
+window.alert("New Here");
+
+<!-- The window.alert() can be written withuot the window prefix -->
+
+alert("I am an alert box");
+
+
+// Confirm Box
+<!-- A confirm box  is often used if we want the user to verify or accept something-->
+<!-- when a confirm box pops up, the user will have click either "Ok" or "Cancel" to proceeed -->
+<!-- If the user clicks "oK", the box returns true. If the user clicks "cancel", the box returns false -->
+
+window.confrim("jasd");
+<!-- It can also be written without the window prefix -->
+
+
+if (confirm("Press a button!")) {
+    txt = "You pressed OK!";
+  } else {
+    txt = "You pressed Cancel!";
+  }
+
+
+  
+Result Size: 337 x 544
+<!-- <!DOCTYPE html>
+<html>
+<body>
+​
+<h2>JavaScript Confirm Box</h2>
+​
+​
+<button onclick="myFunction()">Try it</button>
+​
+<p id="demo"></p>
+​
+<script>
+function myFunction() {
+  var txt;
+  if (confirm("Press a button!")) {
+    txt = "You pressed OK!";
+  } else {
+    txt = "You pressed Cancel!";
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+</script>
+​
+</body>
+</html> -->
+​
+
+
+
+// Prompt Box
+<!-- a prompt box is often used if we want the user to input a value before enetering a page -->
+<!-- When a prompt box pops up, the user will have to click either "Ok" or to cancel to proceed after entering an input value-->
+<!-- if the user clicks "OK" the box returns the input value. If the user clicks "Cancel" the box returns null. -->
+
+Syntax 
+window.prompt("sometext", "defaultText");
+
+
+let person = prompt("Please enter your name", "Harry Potter");
+let text;
+if (person == null || person == "") {
+  text = "User cancelled the prompt.";
+} else {
+  text = "Hello " + person + "! How are you today?";
+}
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Prompt</h2>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  let text;
+  let person = prompt("Please enter your name:", "Harry Potter");
+  if (person == null || person == "") {
+    text = "User cancelled the prompt.";
+  } else {
+    text = "Hello " + person + "! How are you today?";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>
